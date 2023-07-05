@@ -1,0 +1,21 @@
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\bin\Debug\net6.0\appsettings.json
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\bin\Debug\net6.0\Calculadora ASP.NET.exe
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\bin\Debug\net6.0\Calculadora ASP.NET.deps.json
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\bin\Debug\net6.0\Calculadora ASP.NET.runtimeconfig.json
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\bin\Debug\net6.0\Calculadora ASP.NET.dll
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\bin\Debug\net6.0\ref\Calculadora ASP.NET.dll
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\bin\Debug\net6.0\Calculadora ASP.NET.pdb
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\obj\Debug\net6.0\Calculadora ASP.NET.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\obj\Debug\net6.0\Calculadora ASP.NET.AssemblyInfoInputs.cache
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\obj\Debug\net6.0\Calculadora ASP.NET.AssemblyInfo.cs
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\obj\Debug\net6.0\Calculadora ASP.NET.csproj.CoreCompileInputs.cache
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\obj\Debug\net6.0\Calculadora ASP.NET.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\obj\Debug\net6.0\scopedcss\bundle\Calculadora ASP.NET.styles.css
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\obj\Debug\net6.0\Calculadora ASP.NET.dll
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\obj\Debug\net6.0\ref\Calculadora ASP.NET.dll
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\obj\Debug\net6.0\Calculadora ASP.NET.pdb
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\obj\Debug\net6.0\Calculadora ASP.NET.genruntimeconfig.cache
+C:\Users\narci\source\reposW\Calculadora ASP.NET\Calculadora ASP.NET\Calculadora ASP.NET\obj\Debug\net6.0\Calculadora ASP.NET.csproj.AssemblyReference.cache
