@@ -18,10 +18,9 @@ namespace GenericProject.Services.Implementations
             return person;
         }
 
-        public Person Delete(long id)
+        public void Delete(long id)
         {
-            //TODO: not sure if method must return void or the deleted Person
-            throw new NotImplementedException();
+            return;
         }
 
         public Person FindById(long id)

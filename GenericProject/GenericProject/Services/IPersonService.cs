@@ -8,6 +8,6 @@ namespace GenericProject.Services
         Person Update(Person person);
         Person FindById(long id);
         List<Person> FindAll();
-        Person Delete(long id);
+        void Delete(long id);
     }
 }
