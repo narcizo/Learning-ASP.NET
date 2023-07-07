@@ -33,7 +33,7 @@ namespace GenericProject.Controllers
                 Ok(person);
         }
 
-        // [FromBody] tag assigns the JSON within the body of the requisition to the function parameter
+        // [FromBody] tag assigns the JSON within the request body to the function parameter
         [HttpPost]
         public IActionResult Create([FromBody] Person person)
         {
