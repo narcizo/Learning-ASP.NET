@@ -4,63 +4,76 @@ namespace GenericProject.Services.Implementations
 {
     public class PersonServiceImplementation : IPersonService
     {
-        private volatile int count;
+        private MySqlContext _context;
+
+        public PersonServiceImplementation(MySqlContext context)
+        {
+            _context = context;
+        }
+
+        public List<Person> FindAll()
+        {
+            return _context.Persons.ToList();
+        }
+
+        public Person FindById(long id)
+        {
+            return _context.Persons.SingleOrDefault(p => p.Id.Equals(id));
+        }
 
         public Person Create(Person person)
         {
-            //TODO: access DB, Create new entry for new 'person' and return the saved object
+            try
+            {
+                _context.Add(person);
+                _context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
             return person;
         }
 
         public Person Update(Person person)
         {
-            //TODO: access DB, updtade 'person' and return the saved object
-            return person;
+            var queryResult = _context.Persons.SingleOrDefault(p => p.Id.Equals(person.Id));
+
+            if (queryResult != null)
+            {
+                try
+                {
+                    _context.Entry(queryResult).CurrentValues.SetValues(person);
+                    _context.SaveChanges();
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                return person;
+            }
+
+            return new Person();
         }
 
         public void Delete(long id)
         {
-            return;
-        }
+            var queryResult = _context.Persons.SingleOrDefault(p => p.Id.Equals(id));
 
-        public Person FindById(long id)
-        {
-            return new Person
+            if (queryResult != null)
             {
-                Id = IncrementAndGet(),
-                FirstName = "Zé",
-                LastName = "Filipe",
-                Address = "Mato Grosso",
-                Gender = "Não Binário",
-            };
-        }
-
-        public List<Person> FindAll()
-        {
-            List<Person> persons = new List<Person>();
-            for (int i = 0; i < 8; i++)
-            {
-                Person person = MockPerson(i);
-                persons.Add(person);
+                try
+                {
+                    _context.Persons.Remove(queryResult);
+                    _context.SaveChanges();
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+                return;
             }
-            return persons;
         }
 
-        private Person MockPerson(int i)
-        {
-            return new Person
-            {
-                Id = IncrementAndGet(),
-                FirstName = "Person name" + i,
-                LastName = "Person lastname" + i,
-                Address = "Some Address" + i,
-                Gender = i%2 == 0 ? "Male" : "Female",
-            };
-        }
-
-        private long IncrementAndGet()
-        {
-            return Interlocked.Increment(ref count);
-        }
     }
 }
