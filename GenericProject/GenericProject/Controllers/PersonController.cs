@@ -26,7 +26,7 @@ namespace GenericProject.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(long id)
         {
-            var person = Ok(_personService.FindById(id));
+            var person = _personService.FindById(id);
 
             return person == null ? 
                 NotFound() : 
@@ -53,7 +53,12 @@ namespace GenericProject.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(long id)
         {
+            var person = _personService.FindById(id);
+
+            if(person == null) return BadRequest();
+
             _personService.Delete(id);
+
             return NoContent();
         }
     }
