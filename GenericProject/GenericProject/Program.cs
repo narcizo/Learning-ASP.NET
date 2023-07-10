@@ -23,6 +23,8 @@ builder.Services.AddDbContext<MySqlContext>(
     .EnableDetailedErrors()
     );
 
+builder.Services.AddApiVersioning();
+
 //Dependency Injection
 builder.Services.AddScoped<IPersonService, PersonServiceImplementation>();
 

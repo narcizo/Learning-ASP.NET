@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YJr4ePeeBHjllxdOK2Y0VETgOFnPeclXl8gb4CUQKT7NIGBnx83GdmfORUerngEKQCKw2fE8K3jl0BjO0H3wug==",
+  "dgSpecHash": "G9ttZ5HGo4b0DTpBYIokCMtpBZq/DzQFfgPjrvyRX3CQHNqtsAXVPdPwxIjQmoqJNWfvaLtIIoKPcuwhZ3omfg==",
   "success": true,
   "projectFilePath": "C:\\Users\\narci\\source\\reposW\\ASP.NET\\GenericProject\\GenericProject\\GenericProject.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\narci\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.1.0\\microsoft.aspnetcore.mvc.versioning.5.1.0.nupkg.sha512",
     "C:\\Users\\narci\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.2\\microsoft.entityframeworkcore.7.0.2.nupkg.sha512",
     "C:\\Users\\narci\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.2\\microsoft.entityframeworkcore.abstractions.7.0.2.nupkg.sha512",
     "C:\\Users\\narci\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.2\\microsoft.entityframeworkcore.analyzers.7.0.2.nupkg.sha512",

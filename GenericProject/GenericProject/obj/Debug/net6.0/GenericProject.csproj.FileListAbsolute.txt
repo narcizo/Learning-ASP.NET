@@ -34,3 +34,5 @@ C:\Users\narci\source\reposW\ASP.NET\GenericProject\GenericProject\bin\Debug\net
 C:\Users\narci\source\reposW\ASP.NET\GenericProject\GenericProject\bin\Debug\net6.0\MySqlConnector.dll
 C:\Users\narci\source\reposW\ASP.NET\GenericProject\GenericProject\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\narci\source\reposW\ASP.NET\GenericProject\GenericProject\obj\Debug\net6.0\GenericProject.csproj.CopyComplete
+C:\Users\narci\source\reposW\ASP.NET\GenericProject\GenericProject\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Users\narci\source\reposW\ASP.NET\GenericProject\GenericProject\obj\Debug\net6.0\GenericProject.MvcApplicationPartsAssemblyInfo.cs
