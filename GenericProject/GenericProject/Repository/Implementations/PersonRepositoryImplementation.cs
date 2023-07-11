@@ -1,12 +1,12 @@
 ﻿using GenericProject.Model;
 
-namespace GenericProject.Services.Implementations
+namespace GenericProject.Repository.Implementations
 {
-    public class PersonServiceImplementation : IPersonService
+    public class PersonRepositoryImplementation : IPersonRepository
     {
         private MySqlContext _context;
 
-        public PersonServiceImplementation(MySqlContext context)
+        public PersonRepositoryImplementation(MySqlContext context)
         {
             _context = context;
         }
@@ -53,7 +53,7 @@ namespace GenericProject.Services.Implementations
                 return person;
             }
 
-            return new Person();
+            return null;
         }
 
         public void Delete(long id)
@@ -73,6 +73,11 @@ namespace GenericProject.Services.Implementations
                 }
                 return;
             }
+        }
+
+        public bool Exists (long id)
+        {
+            return _context.Persons.Any(p => p.Id.Equals(id));
         }
 
     }

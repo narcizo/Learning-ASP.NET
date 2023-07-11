@@ -1,8 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 
 using GenericProject.Model;
-using GenericProject.Services;
-using GenericProject.Services.Implementations;
+using GenericProject.Business;
+using GenericProject.Business.Implementations;
+using GenericProject.Repository;
+using GenericProject.Repository.Implementations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,7 +28,8 @@ builder.Services.AddDbContext<MySqlContext>(
 builder.Services.AddApiVersioning();
 
 //Dependency Injection
-builder.Services.AddScoped<IPersonService, PersonServiceImplementation>();
+builder.Services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
+builder.Services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
 
 var app = builder.Build();
 
