@@ -1,4 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using Serilog;
+using MySqlConnector;
+using EvolveDb;
 
 using GenericProject.Model;
 using GenericProject.Business;
@@ -9,11 +12,11 @@ using GenericProject.Repository.Implementations;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 
+// Connect Database
 var serverVersion = new MySqlServerVersion(new Version(8, 0, 33));
-var connectionString = "Server=localhost;DataBase=generic_project_asp_net;Uid=root;Pwd=admin123";
+var connectionString = builder.Configuration.GetConnectionString("MySQLConnectionString");
 
 builder.Services.AddDbContext<MySqlContext>(
     dbContextOptions => dbContextOptions
@@ -25,9 +28,20 @@ builder.Services.AddDbContext<MySqlContext>(
     .EnableDetailedErrors()
     );
 
+// Migrations
+if (builder.Environment.IsDevelopment())
+{
+    MigrateDatabase(connectionString);
+}
+
+// Add API Versioning
 builder.Services.AddApiVersioning();
 
-//Dependency Injection
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .CreateLogger();
+
+// Dependency Injection
 builder.Services.AddScoped<IPersonBusiness, PersonBusinessImplementation>();
 builder.Services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
 
@@ -42,3 +56,23 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+static void MigrateDatabase(string connectionString)
+{
+    try
+    {
+        var evolveConnection = new MySqlConnection(connectionString);
+        var evolve = new Evolve(evolveConnection, msg => Log.Information(msg))
+        {
+            // Directories where the migrations are located
+            Locations = new List<string> { "db/migrations", "db/dataset" },
+            IsEraseDisabled = true,
+        };
+        evolve.Migrate();
+    }
+    catch (Exception ex)
+    {
+        Log.Error("Database migration failed. ", ex);
+        throw;
+    }
+}
